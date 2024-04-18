@@ -1,0 +1,113 @@
+.iButton {
+  width: 30.4px;
+  height: 30.4px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: all 0.3s ease-in-out;
+}
+
+.primary {
+  background-color: var(--primary-600);
+  color: #fff;
+  border: 1px solid var(--primary-600);
+}
+
+.secondary {
+  background-color: transparent;
+  color: var(--primary-600);
+  border: 1px solid var(--primary-600);
+}
+
+.text {
+  background-color: transparent;
+  color: var(--primary-600);
+  border: none;
+}
+
+.iButton:not(.iButton:disabled):not(.iButton.loading):hover,
+.iButton:not(.iButton:disabled):not(.iButton.loading):active {
+  filter: brightness(95%);
+  background-color: var(--primary-700);
+}
+
+.secondary:hover,
+.text:hover,
+.secondary:active,
+.text:active {
+  background-color: var(--primary-50) !important;
+}
+
+.secondary.danger {
+  background-color: transparent !important;
+  color: var(--danger-600) !important;
+  border: 1px solid var(--danger-600) !important;
+}
+
+.text.danger {
+  background-color: transparent !important;
+  color: var(--danger-600) !important;
+  border: none !important;
+}
+
+.secondary.danger:hover,
+.text.danger:hover,
+.secondary.danger:active,
+.text.danger:active {
+  background-color: var(--danger-50) !important;
+}
+
+.iButton.danger {
+  border-color: var(--danger-600);
+  background-color: var(--danger-600);
+}
+
+.iButton.danger:not(.iButton.danger:disabled):not(.iButton.danger.loading):hover,
+.iButton.danger:not(.iButton.danger:disabled):not(.iButton.dangerloading):active {
+  background-color: var(--danger-700);
+}
+
+.iButton:disabled {
+  background-color: #e5e7eb;
+  color: #9ca3af;
+  border-color: #e5e7eb;
+  cursor: not-allowed;
+}
+
+.loading:after {
+  content: '';
+  display: inline-block;
+  width: 0.75em;
+  height: 0.75em;
+  border-radius: 50%;
+  border: 1.5px solid rgba(0, 0, 0, 0.2);
+  border-top-color: var(--primary-600);
+  animation: spin 0.6s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.sm {
+  width: 25.4px;
+  height: 25.4px;
+  font-size: 14px;
+}
+
+.xs {
+  width: 20.4px;
+  height: 20.4px;
+  font-size: 8px;
+}
+
+.lg {
+  width: 40.4px;
+  height: 40.4px;
+  font-size: 18px;
+}

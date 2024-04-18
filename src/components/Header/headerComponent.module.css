@@ -1,0 +1,38 @@
+.header {
+  --header-height: 56px;
+  width: 100%;
+  margin-bottom: 20px;
+  height: var(--header-height);
+  max-height: var(--header-height);
+  background-color: #fff;
+  box-shadow: 0 1px 1px 0px rgba(0, 0, 0, 0.25);
+}
+
+.headerContainer {
+  display: flex;
+  height: 100%;
+  margin: 0 16px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  gap: 8px;
+  display: flex;
+  font-size: 18px;
+  align-items: center;
+}
+
+.logo span {
+  font-weight: 400;
+  font-family: 'Chivo Mono', monospace;
+}
+
+.menu {
+  gap: 8px;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  align-items: center;
+}

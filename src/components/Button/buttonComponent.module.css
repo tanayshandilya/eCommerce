@@ -1,0 +1,108 @@
+.button {
+  gap: 5px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 12px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 2.5px;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.primary {
+  background-color: var(--primary-600);
+  color: #fff;
+  border: 1px solid var(--primary-600);
+}
+
+.secondary {
+  background-color: transparent;
+  color: var(--primary-600);
+  border: 1px solid var(--primary-600);
+}
+
+.text {
+  background-color: transparent;
+  color: var(--primary-600);
+  border: none;
+}
+
+.button:not(.button:disabled):not(.button.loading):hover {
+  filter: brightness(95%);
+}
+
+.secondary:hover,
+.text:hover {
+  background-color: var(--primary-50);
+}
+
+.secondary.danger {
+  background-color: transparent !important;
+  color: var(--danger-600) !important;
+  border: 1px solid var(--danger-600) !important;
+}
+
+.text.danger {
+  background-color: transparent !important;
+  color: var(--danger-600) !important;
+  border: none !important;
+}
+
+.secondary.danger:hover,
+.text.danger:hover,
+.secondary.danger:active,
+.text.danger:active {
+  background-color: var(--danger-50) !important;
+}
+
+.button.danger {
+  border-color: var(--danger-600);
+  background-color: var(--danger-600);
+}
+
+.button.danger:not(.button.danger:disabled):not(.button.danger.loading):hover,
+.button.danger:not(.button.danger:disabled):not(.button.dangerloading):active {
+  background-color: var(--danger-700);
+}
+
+.button:disabled {
+  background-color: #e5e7eb;
+  color: #9ca3af;
+  border-color: #e5e7eb;
+  cursor: not-allowed;
+}
+
+.loading:after {
+  content: '';
+  display: inline-block;
+  width: 0.75em;
+  height: 0.75em;
+  border-radius: 50%;
+  border: 1.5px solid rgba(0, 0, 0, 0.2);
+  border-top-color: var(--primary-600);
+  animation: spin 0.6s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.sm {
+  padding: 4px 8px;
+  font-size: 12px;
+}
+
+.xs {
+  padding: 2px 6px;
+  font-size: 8px;
+}
+
+.lg {
+  padding: 10px 20px;
+  font-size: 18px;
+}
